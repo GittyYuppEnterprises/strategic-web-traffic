@@ -23,7 +23,7 @@
 .contact-panel .copy-button:focus-visible{outline:3px solid #166c62;outline-offset:4px}
 @media(max-width:690px){.contact-panel .copy-button{display:block;margin:12px 0 0;width:100%}.contact-panel a.btn{width:100%}}
 
-/* Prelaunch review v8: compact proof-to-offer path, readable microcopy, lower paint cost. */
+/* Phase 8: evidence-to-offer path, small-text legibility and reduced painting cost. */
 .dash{transform:none}
 .dash-head small{font-size:.76rem}
 .metric span{font-size:.78rem}
@@ -38,9 +38,38 @@
 .after-proof-cta .btn{flex-shrink:0}
 .secondary-link{padding-top:6px!important;font-size:.82rem!important;text-decoration:underline!important;text-underline-offset:3px}
 .copy-button[hidden]{display:none!important}
+/* Visible keyboard focus and touch-friendly links in portfolio proof. */
 .sample .textlink{display:inline-flex;align-items:center;min-height:38px;line-height:1.35}
 @media(max-width:690px){.after-proof-cta{align-items:stretch;flex-direction:column;padding:22px 19px}.after-proof-cta .btn{width:100%}}
-
 /* Contrast correction for small informational text (WCAG AA target). */
 .metric span{color:#526562}
 .contact-panel .micro{color:#405951}
+
+/* V9: buyer clarity, evidence-first handoff, mobile readability */
+.hero-inner{grid-template-columns:1.04fr .96fr;gap:44px}
+.hero h1{font-size:clamp(2.55rem,4.9vw,4.45rem);max-width:720px}
+.hero .lead{max-width:610px}
+.hero-alt{margin:12px 0 0;font-size:.91rem;color:#d7e6e2}
+.hero-alt a{color:#c6f5d4;font-weight:800;text-underline-offset:3px}
+.hero-alt a:hover{text-decoration-thickness:2px}
+.trust{margin-top:24px}
+.finding-top{display:flex;align-items:center;justify-content:space-between;gap:9px;flex-wrap:wrap}
+.severity{font-size:.71rem;letter-spacing:.055em;font-weight:900;background:#fff0dd;color:#7c3f14;padding:5px 9px;border-radius:6px}
+.evidence{font-size:.74rem;font-weight:750;color:#285c53}
+.finding-title{font-size:1.37rem;line-height:1.2;margin:15px 0 8px;letter-spacing:-.025em}
+.finding-copy{font-size:.88rem;color:#415962;line-height:1.55;margin:0 0 17px}
+.finding-copy code{font-size:.87em;background:#eef2f0;border-radius:4px;padding:2px 4px}
+.finding-list{margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.finding-list>div{padding:11px 0;border-bottom:1px solid var(--line)}
+.finding-list dt{font-size:.72rem;font-weight:850;letter-spacing:.045em;text-transform:uppercase;color:#356458}
+.finding-list dd{font-size:.84rem;line-height:1.48;margin:4px 0 0;color:#304a4c}
+.dash-note{font-size:.8rem;line-height:1.58}
+.sample a.textlink{min-height:44px;max-width:100%;overflow-wrap:anywhere}
+.sample-mini{min-height:132px}
+.price-card ul{margin-top:10px}
+.price-card li{line-height:1.55}
+.price-card .btn{min-height:48px}
+.faq-list summary{min-height:44px;display:flex;align-items:center;line-height:1.4}
+.contact-panel a.btn,.contact-panel button.btn{min-height:48px}
+@media(max-width:970px){.hero-inner{grid-template-columns:1fr;gap:30px}}
+@media(max-width:690px){.hero-inner{padding:45px 0 52px}.hero h1{font-size:clamp(2.3rem,9.1vw,3.4rem);margin:18px 0 16px}.hero .lead{line-height:1.55}.hero-actions{margin-top:24px}.hero-alt{font-size:.9rem}.trust{margin-top:22px}.dash-body{padding:18px}.sample-mini{min-height:110px}}

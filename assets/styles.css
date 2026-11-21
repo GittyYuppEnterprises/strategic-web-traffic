@@ -40,3 +40,7 @@
 .copy-button[hidden]{display:none!important}
 .sample .textlink{display:inline-flex;align-items:center;min-height:38px;line-height:1.35}
 @media(max-width:690px){.after-proof-cta{align-items:stretch;flex-direction:column;padding:22px 19px}.after-proof-cta .btn{width:100%}}
+
+/* Contrast correction for small informational text (WCAG AA target). */
+.metric span{color:#526562}
+.contact-panel .micro{color:#405951}

@@ -1,52 +1,48 @@
-# Strategic Web Traffic
+# Strategic Web Traffic — V10 agency partner website
 
-White-label website QA, SEO content operations, and scoped conversion-page prototypes for digital marketing agencies.
+Independent, founder-operated white-label SEO content operations and website launch QA for agencies.
 
-**Public contact:** webtrafficstrategic@gmail.com
+**Public website:** https://gittyyuppenterprises.github.io/strategic-web-traffic/  
+**Business inquiry email:** webtrafficstrategic@gmail.com  
+**Operator:** Travis Sweeter (St. Cloud, Minnesota)
 
-## Website
+## Offering
 
-This repository contains the production-ready static site and example deliverables for Strategic Web Traffic.
+- $395 introductory read-only QA pilot: one website, five agreed URLs, one prioritized issue report, one clarification pass. The scope, accepted dates, and payment terms are confirmed before work starts.
+- SEO content and production operations: editorial support, source/claim review, brief creation, on-page recommendations, and handoff. Project/batch pricing by quote.
+- Separate scope: static conversion-page concepts and messaging. Live CMS, forms, analytics, or deployment require separately approved and verified implementation.
 
-**Expected GitHub Pages URL after enabling Pages:**  
-https://gittyyuppenterprises.github.io/strategic-web-traffic/
+Agency retains customer relationship. No contact with end clients by default. Confidentiality, AI tooling, subcontractor handling and sensitive access are agreed before transfer of client data.
 
-Do not distribute or print this URL/QR until the live website has been verified.
+## Evidence and portfolio
 
-## Publishing
+- `samples/owned-business-site.html` — code-based review of a genuine founder-owned local-service website. No results metrics implied.
+- `samples/operations-case-study.html` — agency-side historical role summary, not proprietary records or sole-authorship claims.
+- `reports/owned-site-implementation-review.pdf` — 4-page source-backed owned-site portfolio.
+- `reports/flagship-seo-content-packet.pdf` — 5-page original content packet including full draft, SEO handoff, verification and acceptance.
+- `reports/sample-qa-report.pdf` — explicitly controlled QA demo using an intentionally flawed fixture.
+- Other documents and demo pages are retained but labeled according to evidence type.
 
-In the repository, open **Settings → Pages**. Under **Build and deployment**, choose:
+## Inquiry behavior and privacy
 
-- **Source:** Deploy from a branch
-- **Branch:** `main`
-- **Folder:** `/(root)`
+The homepage's guided inquiry **does not transmit form data** to the server. It assembles a `mailto:` email draft, with a copy-to-clipboard fallback. This avoids presenting unverified live lead capture. User input is not stored in cookies, local storage or analytics; only email messages explicitly sent by visitors reach providers. No credentials, confidential case records or sensitive personal data should be submitted during preliminary scoping.
 
-Save and open the website using the URL GitHub provides. Check the homepage, portfolio sample pages, PDF reports, contact-email actions, and mobile layout.
+**Do not replace this with a backend until email delivery, consent/privacy, spam control and success/error states are tested end-to-end.**
 
-The root `.nojekyll` file prevents Jekyll from altering the static site. No Node build or npm installation is required.
+## Hosting / indexing
 
-## Site structure
+- Static GitHub Pages from `main`, at the repository root.
+- `index.html`, `robots.txt`, `sitemap.xml`, `404.html`, `.nojekyll`.
+- Sitemap includes the homepage and two substantive proof pages. Privacy and prototype demo are `noindex`.
+- Canonicals reference the current GitHub Pages URL, not the historical custom domain whose control is unverified.
 
-- `index.html`: homepage
-- `assets/`: styles and favicon
-- `samples/`: public case studies and conversion-page demonstration
-- `reports/`: public sample reports and agency brief
-- `privacy.html`: privacy information
-- `robots.txt` / `sitemap.xml`: search-engine discovery
-- `404.html`: missing-page fallback
+## Release steps
 
-## Evidence and boundaries
+1. Review V10 via the pull request and test at 320, 390, 768, 1024 and 1440 px.
+2. Verify all local links, portfolios, PDFs, mobile menu, FAQ, and email-draft/copy behavior.
+3. Merge to `main` only after tests pass. Check Pages deployment run and public content.
+4. Use a physical device to confirm HTTPS, PDF downloads and a *test message* received at the agency email.
+5. In Search Console, verify the URL-prefix property and submit `sitemap.xml`. No ranking guarantees.
+6. Only print QR materials after external mobile and email checks succeed.
 
-The owned-business case study refers to a real business website and identifiable public source files, but does not claim measured conversions or SEO improvements. The illustrative QA report uses a controlled, intentionally flawed sample, not a paid client engagement. Prototype forms do not submit real leads.
-
-The **$395 five-page QA pilot** is an introductory wholesale offer, not evidence of accepted market pricing. Scope and turnaround must be agreed before work begins.
-
-## Custom domain
-
-The historical `strategicwebtraffic.com` name was previously associated with this business, but **current domain control is unverified**. Do not add a `CNAME` file or change DNS until registration ownership is confirmed. If a custom domain is added, update the HTML canonical/OG URLs, sitemap, and robots references, then re-run the live-site checks.
-
-## Privacy and maintenance
-
-Do not commit client documents, credentials, unpublished private research, contact lists, or unapproved work samples. Keep the case-study attribution and sample disclosures accurate.
-
-Generated website ZIP provided in the ChatGPT launch package, v7.
+No invented testimonials, audited conversion lifts, ranking results or certifications are represented.

@@ -81,12 +81,16 @@
 (function () {
   'use strict';
   try {
-    if (new URLSearchParams(window.location.search).get('src') !== 'qr') return;
+    // Allowlisted source labels only; no cookies, storage, pixels, or network sends.
+    var labels = {qr:'QR card', email:'agency email', referral:'referral', linkedin:'LinkedIn'};
+    var key = new URLSearchParams(window.location.search).get('src');
+    if (!Object.prototype.hasOwnProperty.call(labels, key)) return;
+    var label = '\n\nSource: Strategic Web Traffic / ' + labels[key];
     document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
       var url = new URL(link.href);
       var original = url.searchParams.get('body') || '';
-      if (original.indexOf('Source: Strategic Web Traffic QR') !== -1) return;
-      url.searchParams.set('body', original + '\n\nSource: Strategic Web Traffic QR');
+      if (original.indexOf('Source: Strategic Web Traffic /') !== -1) return;
+      url.searchParams.set('body', original + label);
       link.href = url.toString();
     });
   } catch (_) { /* Mailto CTAs stay functional even if URL parsing fails. */ }

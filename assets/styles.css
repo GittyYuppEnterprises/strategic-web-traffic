@@ -49,3 +49,7 @@
 .brief-details summary:focus-visible{outline:3px solid #bd6e10;outline-offset:3px}
 @media(max-width:820px){.fit-strip{grid-template-columns:1fr}}
 @media(max-width:560px){.proof-foot-links{flex-direction:column;align-items:flex-start;gap:2px}.fit-strip>div{padding:17px}.brief-details summary{padding:18px 15px}.brief-body{padding:2px 15px 18px}}
+
+.fallback-brief[hidden]{display:none!important}
+.fallback-brief{font-size:.79rem;color:#2a5548;display:block;margin-top:14px}
+.fallback-brief textarea{resize:vertical;min-height:115px}

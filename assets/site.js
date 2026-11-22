@@ -23,7 +23,7 @@
   function clean(s,max){return (s||'').replace(/[\r\n]+/g,' ').trim().slice(0,max)}
   function brief(){
     const val=name=>form.querySelector('[name="'+name+'"]')?.value||'';
-    const kind=clean(form.querySelector('input[name="kind"]:checked')?.value,40),agency=clean(val('agency'),100),reply=clean(val('reply'),160),details=String(val('details')).trim().slice(0,2500),date=clean(val('deadline'),80);
+    const kind=clean(form.querySelector('input[name="kind"]:checked')?.value,40),agency=clean(val('agency'),100),reply=clean(val('reply'),160),details=String(val('details')).trim().slice(0,900),date=clean(val('deadline'),80);
     const lines=['Work type: '+kind,'Agency / contact: '+(agency||'Not provided'),'Reply-to: '+(reply||'Not provided'),'Target date: '+(date||'To be discussed'),'','Project details / public URLs:',details||'To be discussed','', 'Please confirm your availability, proposed scope and terms before proceeding.'];
     if(source)lines.push('', 'Source: Strategic Web Traffic / '+source);
     return {kind,body:lines.join('\n')};
@@ -36,7 +36,7 @@
     catch(_){
       const area=document.createElement('textarea');area.value=msg;area.style.cssText='position:fixed;top:-99999px;left:-99999px';document.body.appendChild(area);area.select();
       try{if(!document.execCommand('copy'))throw Error('Copy blocked');feedback.textContent='Inquiry copied. Paste it into your email app.';}
-      catch(_){feedback.textContent='Automatic copy is unavailable. Use the email address shown to the left and paste your project details manually.';}
+      catch(_){const wrapper=document.getElementById('manual-brief-wrapper'),output=document.getElementById('manual-brief');wrapper.hidden=false;output.value=msg;output.focus();output.select();feedback.textContent='Automatic copy is unavailable. Select and copy the prepared text below, then paste it into your email app.';}
       finally{area.remove()}
     }
   });
